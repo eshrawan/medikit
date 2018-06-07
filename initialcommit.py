@@ -17,6 +17,15 @@ minutes = ('00','01','02','03','04','05','06','07','08','09','10',
 
 days = ('Mon','Tue','Wed','Thu','Fri','Sat','Sun')
 
+## datestring=' %d/%m/%Y %H:%M'
+date = (int)(datetime.datetime.now().strftime('%d')) - 1
+month = (int)(datetime.datetime.now().strftime('%m')) - 1
+year = (int)(datetime.datetime.now().strftime('%Y')) 
+hour = (int)(datetime.datetime.now().strftime('%H')) 
+minute = (int)(datetime.datetime.now().strftime('%M')) 
+day = (int)(datetime.datetime.now().strftime('%d')) - 1
+datestring='%H:%M'
+
 def enrol_patient():
           global data_location  
           buff=[]
