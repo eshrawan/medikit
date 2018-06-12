@@ -89,3 +89,58 @@ def enrol_patient():
                             print row
                             filewriter.writerow(row)
                 flag=1
+###############
+
+		if flag == 1:
+             while True:
+                
+                lcd.clear()
+                lcd.message('Enter number of\nMedicines:')
+                lcd.set_cursor(0,3)
+                lcd.message('Press ESC to go back')
+                lcd.show_cursor(1)
+                num = keyboard(10,1,data_type='num')
+                lcd.show_cursor(0)
+                lcd.clear()
+                if not num:
+                    lcd.message('    SET Reminder    ')
+                else:    
+                    no_medicine = int(num,base=10)
+                    lcd.message('Names of Medicines:')
+                    lcd.show_cursor(1)
+                    print 'num =' ,no_medicine
+                    medicine_names = [None] * no_medicine
+                    print 'medicine_names= ',medicine_names
+                    c = 1
+                    for x in range(0,no_medicine):
+                        print x
+                        if c>3:
+                            lcd.clear()
+                            lcd.message('Names of Medicines:')
+                            c = 1  
+                        lcd.set_cursor(0,c)
+                        lcd.message(str(x+1) + ')')
+                        name = keyboard(2,c,data_type='all')
+                        medicine_names[x] = name
+                        c = c+1
+                    menu = 1
+                    print 'medicine_names= ',medicine_names
+                   
+                    lcd.clear()
+                    lcd.message('Enter number of \ndosage: ')
+                    lcd.show_cursor(1)
+                    lcd.set_cursor(0,3)
+                    lcd.message('Press ESC to go back')
+                    lcd.show_cursor(1)
+                    num = keyboard(7,1,data_type='num')
+                    lcd.clear()
+                    lcd.show_cursor(0) 
+                    if not num:
+                        lcd.message('    SET Reminder    ')
+                    else:
+                        lcd.message('Set Time for dosage:')
+                        lcd.show_cursor(1)
+                        no_dosage = int(num,base=10)
+                        print 'num of dosage =' ,no_dosage
+                        medicine_dosage = [None] * no_dosage
+                        print 'medicine_dosage= ',medicine_dosage
