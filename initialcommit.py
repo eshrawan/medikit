@@ -7,7 +7,7 @@ author: @eshrawan
 Copyright 2018, Eshita Shrawan, All Rights Reserved.
 """
 
-# importing necessary odules and packages
+# importing necessary modules and packages
 import pygame
 import csv
 import Adafruit_CharLCD as LCD
